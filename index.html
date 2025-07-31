@@ -1423,6 +1423,64 @@
   });
 </script>
 
+<script>
+  // منع الزر اليمين
+  document.addEventListener('contextmenu', e => e.preventDefault());
+
+  // منع تحديد النص
+  document.addEventListener('selectstart', e => e.preventDefault());
+
+  // منع النسخ من الكيبورد
+  document.addEventListener('copy', e => {
+    e.preventDefault();
+    alert("هذا المحتوى محمي. لا يمكنك نسخه.");
+  });
+
+  // منع اختصارات مثل Ctrl+S (حفظ الصفحة) و Ctrl+U (عرض المصدر)
+  document.addEventListener('keydown', function(e) {
+    if ((e.ctrlKey && (e.key === 's' || e.key === 'u' || e.key === 'a' || e.key === 'c'))) {
+      e.preventDefault();
+      alert("تم تعطيل هذا الاختصار.");
+    }
+  });
+</script>
+
+
+<script>
+  document.addEventListener('keydown', function(e) {
+    if (e.ctrlKey && ['u', 's', 'c', 'a', 'p'].includes(e.key.toLowerCase())) {
+      e.preventDefault();
+      alert("تم تعطيل هذا الاختصار.");
+    }
+  });
+</script>
+
+
+<style>
+  img {
+    pointer-events: none;
+    -webkit-user-drag: none;
+    user-select: none;
+  }
+</style>
+
+
+
+
+<body onmousedown="return false;" onselectstart="return false;" oncontextmenu="return false;">
+
+
+
+<script>
+  document.addEventListener('contextmenu', function(e) {
+    alert("🚫 لا يمكن نسخ هذا المحتوى.");
+    e.preventDefault();
+  });
+</script>
+
+
+
+
 
 
 </body>
