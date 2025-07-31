@@ -1365,6 +1365,11 @@
             <p>نتمنى أن يكون هذا الكتاب قد نفعكم وأضاف لكم قيمة في حياتكم</p>
             <div style="margin-top: 15px; font-size: 0.9em; color: #666;">
                 تم إعداد والتصميم هذا الموقع بواسطة عمران ملحم
+                </div>
+                <div style="margin-top: 15px; font-size: 0.9em; color: #666;"></div>
+<footer style="text-align: center; padding: 20px; font-size: 14px;">
+  © 2025 Emran Melhem. جميع الحقوق محفوظة. يُمنع النسخ أو إعادة النشر دون إذن خطي.
+</footer>
             </div>
             <a href="#" class="back-to-top">العودة إلى الأعلى</a>
         </footer>
@@ -1397,5 +1402,28 @@
             });
         });
     </script>
+    
+
+
+<script>
+  // منع الضغط على الزر اليمين
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+  });
+
+  // منع تحديد النص
+  document.addEventListener('selectstart', function(e) {
+    e.preventDefault();
+  });
+
+  // منع النسخ من الكيبورد
+  document.addEventListener('copy', function(e) {
+    e.preventDefault();
+    alert("تم تعطيل النسخ. هذا المحتوى محمي.");
+  });
+</script>
+
+
+
 </body>
 </html>
